@@ -145,7 +145,8 @@ module.exports = function(environment) {
   }
 
   // Override the Rancher server/endpoint with environment var
-  var server = process.env.RANCHER;
+  var server = 'https://39.107.110.199:10443/';
+  // var server = process.env.RANCHER;
   if ( server )
   {
     ENV.APP.apiServer = normalizeHost(server,443);

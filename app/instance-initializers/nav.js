@@ -19,15 +19,15 @@ const rootNav = [
     ],
   },
 
-  {
-    scope:          'project',
-    id:             'project-apps',
-    localizedLabel: 'nav.apps.tab',
-    route:          'apps-tab',
-    ctx:            [getProjectId],
-    resource:       ['app'],
-    resourceScope:  'project',
-  },
+  // {
+  //   scope:          'project',
+  //   id:             'project-apps',
+  //   localizedLabel: 'nav.apps.tab',
+  //   route:          'apps-tab',
+  //   ctx:            [getProjectId],
+  //   resource:       ['app'],
+  //   resourceScope:  'project',
+  // },
   {
     scope:          'project',
     id:             'infra',
@@ -62,15 +62,15 @@ const rootNav = [
         resource:       ['configmap'],
         resourceScope:  'project',
       },
-      {
-        id:             'tools-logging',
-        localizedLabel: 'nav.tools.logging',
-        icon:           'icon icon-files',
-        route:          'authenticated.project.logging',
-        resourceScope:  'global',
-        resource:       [],
-        ctx:            [getProjectId],
-      },
+      // {
+      //   id:             'tools-logging',
+      //   localizedLabel: 'nav.tools.logging',
+      //   icon:           'icon icon-files',
+      //   route:          'authenticated.project.logging',
+      //   resourceScope:  'global',
+      //   resource:       [],
+      //   ctx:            [getProjectId],
+      // },
       {
         id:             'infra-registries',
         localizedLabel: 'nav.infra.registries',
@@ -213,24 +213,24 @@ const rootNav = [
         resource:       [],
         ctx:            [getClusterId],
       },
-      { divider: true },
-      {
-        id:             'cluster-tools-logging',
-        localizedLabel: 'nav.tools.logging',
-        // icon: 'icon icon-key',
-        route:          'authenticated.cluster.logging',
-        resourceScope:  'global',
-        resource:       [],
-        ctx:            [getClusterId],
-      },
-      { divider: true },
-      {
-        id:             'cluster-tools-pipeline',
-        localizedLabel: 'nav.tools.pipeline',
-        route:          'authenticated.cluster.pipeline.settings',
-        ctx:            [getClusterId],
-        resourceScope:  'cluster',
-      },
+      // { divider: true },
+      // {
+      //   id:             'cluster-tools-logging',
+      //   localizedLabel: 'nav.tools.logging',
+      //   // icon: 'icon icon-key',
+      //   route:          'authenticated.cluster.logging',
+      //   resourceScope:  'global',
+      //   resource:       [],
+      //   ctx:            [getClusterId],
+      // },
+      // { divider: true },
+      // {
+      //   id:             'cluster-tools-pipeline',
+      //   localizedLabel: 'nav.tools.pipeline',
+      //   route:          'authenticated.cluster.pipeline.settings',
+      //   ctx:            [getClusterId],
+      //   resourceScope:  'cluster',
+      // },
     ],
   },
 
@@ -251,14 +251,14 @@ const rootNav = [
     resource:       ['nodedriver'],
     resourceScope:  'global',
   },
-  {
-    scope:          'global',
-    id:             'global-catalogs',
-    localizedLabel: 'nav.admin.catalogs',
-    route:          'global-admin.catalog',
-    resource:       ['catalog'],
-    resourceScope:  'global',
-  },
+  // {
+  //   scope:          'global',
+  //   id:             'global-catalogs',
+  //   localizedLabel: 'nav.admin.catalogs',
+  //   route:          'global-admin.catalog',
+  //   resource:       ['catalog'],
+  //   resourceScope:  'global',
+  // },
   {
     scope:          'global',
     id:             'global-accounts',
@@ -267,13 +267,13 @@ const rootNav = [
     resource:       ['user'],
     resourceScope:  'global',
   },
-  {
-    scope:          'global',
-    id:             'global-settings',
-    localizedLabel: 'nav.settings.tab',
-    route:          'global-admin.settings.advanced',
-    resourceScope:  'global',
-  },
+  // {
+  //   scope:          'global',
+  //   id:             'global-settings',
+  //   localizedLabel: 'nav.settings.tab',
+  //   route:          'global-admin.settings.advanced',
+  //   resourceScope:  'global',
+  // },
   {
     scope:          'global',
     id:             'global-security',
@@ -296,17 +296,17 @@ const rootNav = [
         resource:       ['podsecuritypolicytemplate'],
         resourceScope:  'global',
       },
-      {
-        id:             'global-security-authentication',
-        localizedLabel: 'nav.admin.security.authentication',
-        icon:           'icon icon-users',
-        route:          'global-admin.security.authentication',
-        condition() {
-          const authConfigs = this.get('globalStore').all('authConfig');
+      // {
+      //   id:             'global-security-authentication',
+      //   localizedLabel: 'nav.admin.security.authentication',
+      //   icon:           'icon icon-users',
+      //   route:          'global-admin.security.authentication',
+      //   condition() {
+      //     const authConfigs = this.get('globalStore').all('authConfig');
 
-          return authConfigs.get('length') > 0;
-        }
-      },
+      //     return authConfigs.get('length') > 0;
+      //   }
+      // },
     ],
   },
 //  {

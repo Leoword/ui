@@ -43,7 +43,7 @@ pipelinesPage:
   awaitingWebhookPush: 等待上传
   awaitingWebhookPR: 等待PR
   triggerManually: 手动触发
-  notDeployed: Pipeline没有启用, 点击<a href="{route}">这里</a>启用Pipline
+  notDeployed: Pipeline没有启用, 请先启用Pipline
 pipelinesSetting:
   globalConfigChangeLabel: 使用OAuth应用程序去认证
   customConfigChangeLabel: 使用另一个OAuthe应用程序

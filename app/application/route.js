@@ -176,7 +176,7 @@ export default Route.extend({
   },
 
   updateWindowTitle: function() {
-    document.title = get(this, 'settings.appName');
+    document.title = 'Lemon cloud';
   }.observes('settings.appName'),
 
   finishLogin() {
