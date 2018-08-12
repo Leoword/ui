@@ -86,7 +86,7 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
       version: pkg.version,
-      appName: 'Rancher',
+      appName: 'Lemon cloud',
       environment: environment,
       baseAssets: '/',
 
@@ -145,8 +145,8 @@ module.exports = function(environment) {
   }
 
   // Override the Rancher server/endpoint with environment var
-  var server = 'https://39.107.110.199:10443/';
-  // var server = process.env.RANCHER;
+  // var server = 'https://39.107.110.199:10443/';
+  var server = process.env.RANCHER;
   if ( server )
   {
     ENV.APP.apiServer = normalizeHost(server,443);

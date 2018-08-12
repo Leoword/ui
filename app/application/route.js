@@ -167,7 +167,7 @@ export default Route.extend({
       let cur = svc.getLocale();
 
       if ( cur === 'none' ) {
-        svc.sideLoadLanguage(get(this, 'previousLang') || 'en-us');
+        svc.sideLoadLanguage(get(this, 'previousLang') || 'zh-hans');
       } else {
         set(this, 'previousLang', cur);
         svc.sideLoadLanguage('none');
