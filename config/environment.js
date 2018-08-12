@@ -86,7 +86,7 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
       version: pkg.version,
-      appName: 'Lemon cloud',
+      appName: 'Lemon Cloud应用容器集群管理',
       environment: environment,
       baseAssets: '/',
 

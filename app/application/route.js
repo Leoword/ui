@@ -176,7 +176,7 @@ export default Route.extend({
   },
 
   updateWindowTitle: function() {
-    document.title = 'Lemon cloud';
+    document.title = 'Lemon Cloud应用容器集群管理';
   }.observes('settings.appName'),
 
   finishLogin() {
