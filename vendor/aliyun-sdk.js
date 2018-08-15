@@ -851,7 +851,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
         } else {
           resp.data = null;
           resp.error = ALY.util.error(new Error(),
-            {code: 'UnknownError', message: 'An unknown error occurred.'});
+            {code: 'UnknownError', message: '出现未知错误。'});
         }
       });
   
@@ -7085,7 +7085,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
           }
         } catch (err) {
           throw ALY.util.error(err, {
-            message: 'Could not find API configuration ' + file
+            message: '找不到API配置 ' + file
           });
         }
   

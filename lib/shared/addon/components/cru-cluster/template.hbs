@@ -12,7 +12,7 @@
 
 {{#unless initialProvider}}
 
-  <div class="row nav nav-boxes checked-active inline-form">
+  {{!-- <div class="row nav nav-boxes checked-active inline-form">
     <div class="col span-8 col-inline mb-0">
       <div>
         <label class="acc-label">{{t 'clusterNew.driverLabels.cloud'}}</label>
@@ -41,10 +41,10 @@
       {{/each}}
     </div>
 
-  </div>
+  </div> --}}
 
   <div class="row nav nav-boxes checked-active inline-form">
-    <div class="col span-8 col-inline mt-0">
+    {{!-- <div class="col span-8 col-inline mt-0">
       <div>
         <label class="acc-label">{{t 'clusterNew.driverLabels.infra'}}</label>
       </div>
@@ -56,14 +56,14 @@
           {{/if}}
         {{/link-to}}
       {{/each}}
-    </div>
+    </div> --}}
 
     <div class="col span-2 col-inline mt-0">
       <div>
         <label class="acc-label">{{t 'clusterNew.driverLabels.custom'}}</label>
       </div>
       {{#each (get providerGroups "customGroup") as |choice|}}
-        {{#link-to (query-params provider=choice.name) class=(concat "mb-20 mt-10 col span-12 col-inline nav-box-item driver generic machine-driver " choice.name)}}
+        {{#link-to (query-params) class=(concat "mb-20 mt-10 col span-12 col-inline nav-box-item driver generic machine-driver custom active ember-view" choice.name)}}
           <p class="sr-only">{{driver-name choice.name}}</p>
           {{#if choice.genericIcon}}
             <p class="text-link text-bold">{{driver-name choice.name}}</p>

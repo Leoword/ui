@@ -41,12 +41,12 @@
     </div>
   {{/unless}}
 </div>
-
+{{!-- 
 <div class="col span-12">
   <p class="text-info">
     {{t 'cloudProvider.helpText' htmlSafe=true}}
   </p>
-</div>
+</div> --}}
 
 {{#if (eq selectedCloudProvider 'azure')}}
   {{#each-in configAnswers as |key value|}}

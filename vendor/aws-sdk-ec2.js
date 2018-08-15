@@ -710,7 +710,7 @@ AWS.EventListeners = {
       req.service.config.getCredentials(function(err) {
         if (err) {
           req.response.error = AWS.util.error(err,
-            {code: 'CredentialsError', message: 'Missing credentials in config'});
+            {code: 'CredentialsError', message: '配置中丢失凭据'});
         }
         done();
       });
@@ -719,7 +719,7 @@ AWS.EventListeners = {
     add('VALIDATE_REGION', 'validate', function VALIDATE_REGION(req) {
       if (!req.service.config.region && !req.service.isGlobalEndpoint) {
         req.response.error = AWS.util.error(new Error(),
-          {code: 'ConfigError', message: 'Missing region in config'});
+          {code: 'ConfigError', message: '配置中的缺失区域'});
       }
     });
 
@@ -803,7 +803,7 @@ AWS.EventListeners = {
       } else {
         resp.data = null;
         resp.error = AWS.util.error(new Error(),
-          {code: 'UnknownError', message: 'An unknown error occurred.'});
+          {code: 'UnknownError', message: '出现未知错误。'});
       }
     });
 
@@ -3194,7 +3194,7 @@ AWS.ResourceWaiter = inherit({
     resp.data = null;
     resp.error = AWS.util.error(resp.error || new Error(), {
       code: 'ResourceNotReady',
-      message: 'Resource is not in the state ' + this.state,
+      message: '资源不在状态 ' + this.state,
       retryable: retryable
     });
   },
@@ -3235,7 +3235,7 @@ AWS.ResourceWaiter = inherit({
       if (noException) return;
       throw new AWS.util.error(new Error(), {
         code: 'StateNotFoundError',
-        message: 'State ' + state + ' not found.'
+        message: 'State ' + state + ' 未发现。'
       });
     }
 
@@ -3837,7 +3837,7 @@ AWS.util.update(AWS.Service, {
           setApi(AWS.apiLoader(superclass.serviceIdentifier, version));
         } catch (err) {
           throw AWS.util.error(err, {
-            message: 'Could not find API configuration ' +
+            message: '找不到API配置 ' +
               superclass.serviceIdentifier + '-' + version
           });
         }
@@ -3971,7 +3971,7 @@ function signedUrlBuilder(request) {
       AWS.util.date.unixTimestamp() + expires, 10).toString();
   } else {
     throw AWS.util.error(new Error(), {
-      message: 'Presigning only supports S3 or SigV4 signing.',
+      message: '仅支持S3或SIGV4签署。',
       code: 'UnsupportedSigner', retryable: false
     });
   }

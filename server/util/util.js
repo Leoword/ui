@@ -1,52 +1,52 @@
 /* eslint-env node */
 const ERRORS = {
   auth: {
-    message: 'Unauthorized',
+    message: '未经授权的',
     status: 401,
     type: 'error',
-    detail: 'Unauthorized'
+    detail: '未经授权的'
   },
   account: {
-    message: 'Unauthorized',
+    message: '未经授权的',
     status: 401,
     type: 'error',
-    detail: 'There was an error trying to retrieve that account, ensure you have entered the correct credentials and try again later'
+    detail: '试图检索该帐户时出错，请确保您已输入正确的证书，然后重试。'
   },
   db: {
-    message: 'Internal Server Error',
+    message: '内部服务器错误',
     status: 500,
     type: 'error',
-    detail: 'There was an error retrieving your data, ensure the info you entered is correct and try again'
+    detail: '检索数据时出错，请确保输入的信息正确，然后再试一次。'
   },
   email: {
-    message: 'Internal Server Error',
+    message: '内部服务器错误',
     status: 500,
     type: 'error',
-    detail: 'There was an error with your email, ensure you have entered the correct email and try again'
+    detail: '您的电子邮件出错，请确保您输入正确的电子邮件，然后再试一次。'
   },
   exists: {
-    message: 'Account Exists',
+    message: '帐户存在',
     status: 409,
     type: 'error',
-    detail: 'That account exists already, please use the reset password tool or create a new account with a different email.'
+    detail: '该帐户已经存在，请使用重置密码工具或创建一个具有不同电子邮件的新帐户。'
   },
   generic: {
-    message: 'Internal Server Error',
+    message: '内部服务器错误',
     status: 500,
     type: 'error',
-    detail: 'Internal Server Error'
+    detail: '内部服务器错误'
   },
   token: {
-    message: 'Internal Server Error',
+    message: '内部服务器错误',
     status: 404,
     type: 'error',
-    detail: 'There was an error trying to retrieve that token, try again later'
+    detail: '试图检索该令牌时出错，请稍后再试'
   },
   subscription: {
-    message: 'Internal Server Error',
+    message: '内部服务器错误',
     status: 500,
     type: 'error',
-    detail: 'There was an error trying to process your subscription, try again later'
+    detail: '尝试处理订阅时出错，请稍后再试'
   }
 };
 var generateError = function(code, detail, response) {

@@ -74,7 +74,7 @@ function onProxyError(err, req, res) {
     type: 'error',
     status: 500,
     code: 'ProxyError',
-    message: 'Error connecting to proxy',
+    message: '连接到代理失败',
     detail: err.toString()
   }
 

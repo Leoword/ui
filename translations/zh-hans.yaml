@@ -447,14 +447,14 @@ authPage:
           ul:
             li1: "企业版GitHub，请登录你的账号，点击Settings，然后点击Applications进行设置"
         li2:
-          text: '点击 "Register new application" 并填写表单内容:'
+          text: '点击 "注册新应用程序" 并填写表单内容:'
           ul:
             li1: '<b>应用名称: </b><span class="text-muted">应用名称, 例如: My {appName}</span>'
             li2: '主页URL: '
             li3: '<b>应用描述: </b><span class="text-muted">应用描述, 可选</span>'
             li4: '授权回调URL: '
         li3:
-          text: '点击 "Register Application" '
+          text: '点击 "注册应用程序" '
       form:
         header: '2. 配置{appName}以使用你的GitHub进行身份验证'
         subtext: '将新创建的GitHub应用Client ID和Secret复制粘贴到下方的对应输入框中'
@@ -492,20 +492,20 @@ authPage:
       replyUrl: "在配置之前，需首先在Azure AD设置{appName}的应答URL地址，并确保设置的URL为<code>{replyUrl}</code>。注意: 如使用Azure中国，需设置为<code>{replyUrl}</code>verify-auth-azure"
       help: '输入Tenant ID，Client ID和Admin用户详细信息以连接到Azure AD进行身份验证'
       applicationId:
-        label: Application ID
+        label: 应用 ID
         placeholder: UUID字符串
       applicationSecret:
-        label: Application Secret
+        label: 应用 Secret
       serverURL:
-        label: Rancher Server Url
+        label: Lemonce Cloud 应用管理服务路径
       azureADEndpoint:
-        label: 'Endpoint(Azure China地址: https://login.chinacloudapi.cn)'
+        label: '端(Azure China地址: https://login.chinacloudapi.cn)'
       azureADGraphEndpoint:
-        label: 'Graph Endpoint(Azure China地址: https://graph.chinacloudapi.cn)'
+        label: 'Graph 端(Azure China地址: https://graph.chinacloudapi.cn)'
       azureADTokenEndpoint:
-        label: Token Endpoint
+        label: Token 端
       azureADAuthEndpoint:
-        label: Auth Endpoint
+        label: Auth 端
       tenantId:
         label: 租户ID
         placeholder: UUID字符串
@@ -578,7 +578,7 @@ catalogPage:
       label: 应用过滤
     certified:
       rancher:
-        rancher: Rancher Labs
+        rancher: Lemonce Cloud 实验
         partner: 官方
       pl:
         rancher: 核心
@@ -835,7 +835,7 @@ clusterDashboard:
   node: Nodes
   etcd: Etcd
   scheduler: Scheduler
-  controllerManager: Controller Manager
+  controllerManager: 控制器管理器
   value: 值
   notActive: 此集群当前为<b>{state}</b>
   notReady: 此集群当前为<b>{state}</b>，在API准备就绪之前，直接与其交互的功能将不可用。
@@ -1140,7 +1140,7 @@ loginPage:
     authFailedCreds: "登录失败: 检查凭据，或者您的帐户可能无权登录"
     authFailed: "登录失败: 您的帐户可能无权登录"
   readableProviders:
-    ad: Active Directory
+    ad: 现用目录
     azureAd: Azure AD
     local: 本地用户
     openldap: OpenLDAP
@@ -1461,7 +1461,7 @@ notifierPage:
     defaultRecipient: 默认接收人(频道)
     defaultRecipientPlaceholder: '例如: example.com'
     helpText: |
-     '以下是<a href="https://get.slack.help/hc/en-us/articles/115005265063-Incoming-WebHooks-for-Slack" target="_blank" rel="nofollow noopener noreferrer">创建传入WebHooks</a>的方法。'
+     '以下是创建传入WebHooks的方法。'
 
   smtp:
     server: Smtp服务器配置
@@ -1480,7 +1480,7 @@ notifierPage:
     serviceKey: 服务密钥
     serviceKeyPlaceholder: 您的PagerDuty服务密钥
     helpText: |
-      '以下是<a href="https://support.pagerduty.com/docs/webhooks">为PagerDuty创建传入WebHooks</a>的方法。'
+      '以下是为PagerDuty创建传入WebHooks的方法。'
 
   webhook:
     url: URL
@@ -1607,12 +1607,12 @@ ldap:
         labelText: 组DN属性
         placeholder: 专有名称
       nestedGroup:
-        title: Nested Group Membership
+        title: 嵌套群成员
         enabled:
-          labelText: Search direct and nested group memberships
-          helpText: Nested search may be slower in large directories
+          labelText: 搜索直接和嵌套组成员
+          helpText: 嵌套搜索可能在大型目录中较慢。
         disabled:
-          labelText: Search only direct group memberships
+          labelText: 只搜索直接群组成员
   testAuth:
     header: "3. 测试并启用认证"
     helpText: "通过你的{providerName}账号进行验证测试以确认配置是否正确:"
@@ -1687,15 +1687,15 @@ cloudProvider:
   azure: Azure
   name: 云提供商名称
   custom:
-    helpText: '请通过编辑YAML来添加其他<a href="http://rancher.com/docs/rke/v0.1.x/en/config-options/cloud-providers/" target="_blank" rel="nofollow noopener noreferrer">云提供商</a>'
+    helpText: '请通过编辑YAML来添加其他云提供商'
 
   helpText: |
-    详细了解<a href="https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/" target="_blank" rel="nofollow noopener noreferrer">云提供商</a>
+    详细了解云提供商
   warning:
     使用云提供程序而不传递云提供程序配置可能会导致您的集群无法正确配置，推荐您在创建集群之前添加云提供程序配置，文档中可以找到支持的云提供商所需的先决条件。
   azureCloudConfig:
     cloudProviderBackoff:
-      description: "Enable exponential backoff to manage resource request retries"
+      description: "启用指数退避来管理资源请求重试"
     cloudProviderBackoffDuration:
       description: "Backoff duration"
     cloudProviderBackoffExponent:
@@ -1711,7 +1711,7 @@ cloudProvider:
     cloudProviderRateLimitQPS:
       description: "Rate limit QPS (Read)"
     maximumLoadBalancerRuleCount:
-      description: "Maximum allowed LoadBalancer Rule Count is the limit enforced by Azure Load balancer"
+      description: "最大允许负载均衡器规则计数是由Azure负载均衡器强制执行的限制。 "
     useInstanceMetadata:
       description: "尽可能使用实例元数据服务"
     useManagedIdentityExtension:
@@ -1729,9 +1729,9 @@ cloudProvider:
     location:
       description: "部署集群的资源组位置"
     primaryAvailabilitySetName:
-      description: "The name of the availability set that should be used as the load balancer backend"
+      description: "可用作负载平衡器后端的可用性集的名称。"
     primaryScaleSetName:
-      description: "The name of the scale set that should be used as the load balancer backend"
+      description: "应该用作负载平衡器后端的比例集的名称。"
     resourceGroup:
       description: "部署集群的资源组名称"
     routeTableName:
@@ -1786,8 +1786,8 @@ catalogSettings:
       help-name: 唯一的名称
       help-repo: '仓库URL地址:'
       help-branch: "可选: 如果使用基于Git的应用商店，则还需要设置分支名称。"
-      help-git: "基于Git的商店URL地址, 例如: https://github.com/{appName}/charts.git。"
-      help-chart: 'Helm Charts server URL,例如: https://kubernetes-charts.storage.googleapis.com/(详细信息可查看<a href="https://docs.helm.sh/developing_charts/#hosting-chart-repositories" target="_blank" rel="nofollow noopener noreferrer">Chart托管仓库</a>)。'
+      help-git: "基于Git的商店URL地址。"
+      help-chart: 'Helm Charts server URL。'
     addActionLabel: 添加应用商店
     noMatch: 没有与当前搜索匹配的应用商店
     noData: 没有自定义应用商店
@@ -1863,7 +1863,7 @@ clusterNew:
     access:
       title: 账户访问
       detail: 配置用于与Azure通讯的凭据
-      help: '参考<a href="https://docs.microsoft.com/en-us/azure/aks/kubernetes-service-principal" target="_blank">链接文档</a>创建客户端ID和秘钥。'
+      help: '创建客户端ID和秘钥。'
     placement:
       label: 位置
     count:
@@ -1976,7 +1976,7 @@ clusterNew:
       placeholder: 服务帐号私钥JSON文件
       configured: 为{project}项目配置
       helpText: |
-        "创建一个拥有JSON私钥的<a href="https://console.cloud.google.com/projectselector/iam-admin/serviceaccounts" target="_blank" rel="nofollow noopener noreferrer">Service Account</a>，并在此处提供JSON。有关创建服务帐户的更多信息，请参阅<a href="https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances" target="_blank" rel="nofollow noopener noreferrer">Google Cloud文档</a> 。需要四个IAM角色: Compute Viewer (<code>roles/compute.viewer</code>)，(Project) Viewer (<code>roles/viewer</code>)，Kubernetes Engine Admin (<code>roles/container.admin</code>)和Service Account User (<code>roles/iam.serviceAccountUser</code>)，更多关于角色的信息可在<a href="https://cloud.google.com/kubernetes-engine/docs/how-to/iam-integration" target="_blank" rel="nofollow noopener noreferrer">此处</a>找到。<a href="https://cloud.google.com/kubernetes-engine/docs/how-to/iam-integration" target="_blank" rel="nofollow noopener noreferrer">"
+        "创建一个拥有JSON私钥的服务帐户，并在此处提供JSON。需要四个IAM角色: 计算查看器 (<code>角色/计算查看器</code>)，(进程) 查看器 (<code>角色/查看器</code>)，管理系统 (<code>角色/管理员</code>)和服务帐户用户 (<code>角色/服务帐户用户</code>)。"
     zone:
       label: 区域
       prompt: 选择一个区域...
@@ -2103,7 +2103,7 @@ clusterNew:
       pageheader: 自定义主机运行命令
       sectionheader: 主机选项
       title: 主机角色
-      detail: '选择主机角色,端口放行请参考: https://rancher.com/docs/rancher/v2.x/en/installation/references/'
+      detail: '请选择主机角色,端口放行'
       header:
         etcd: etcd
         controlplane: Control
@@ -2127,7 +2127,7 @@ clusterNew:
       dns: 集群DNS服务器
     warning:
       aws:
-        iam: '使用Amazon Cloud Provider时，应在节点模板中配置IAM角色名称'
+        iam: '使用亚马逊云提供商时，应在节点模板中配置IAM角色名称'
     errors:
       etcd: 请选择1个，3个或5个主机用于etcd。
       controlPlane: 请至少选择一个用于management的主机。
@@ -3033,7 +3033,7 @@ editUser:
 
 envCatalog:
   header: 管理应用商店
-  subtext: '可以在这里定义自定义的应用商店源，该应用商店仅对当前环境的用户可见。全局应用商店对所有环境可见，仅能由管理员在管理设置中修改。应用商店需要一个唯一的名称并且支持<code>git clone</code>的URL地址(参考 <a href="https://git-scm.com/docs/git-clone#_git_urls_a_id_urls_a" target="_blank" rel="nofollow noopener noreferrer">文档</a>以获取更多信息)'
+  subtext: '可以在这里定义自定义的应用商店源，该应用商店仅对当前环境的用户可见。全局应用商店对所有环境可见，仅能由管理员在管理设置中修改。应用商店需要一个唯一的名称并且支持<code>git clone</code>的URL地址'
   addActionLabel: 添加应用商店
 
 moveNamespace:
@@ -3063,7 +3063,7 @@ formBalancerConfig:
   title: 自定义配置文件
   detail: 提供您的自定义配置文件，这个配置将会被应用到{appName}自动生产的配置上方。
   custom: |
-    请参考<a href="https://cbonte.github.io/haproxy-dconv/1.6/configuration.html" target="_blank" rel="nofollow noopener noreferrer">haproxy文档</a>了解更多关于该配置文件的参数。当重写<code>backend</code>或包括目标容器IP的某行时，请使用<code>$IP</code>来代替IP地址，{appName}将会自动转换成相应的配置。
+    当重写<code>后端</code>或包括目标容器IP的某行时，请使用<code>$IP</code>来代替IP地址，{appName}将会自动转换成相应的配置。
   config:
     prompt: 自定义haproxy.cfg内容
 
@@ -3836,7 +3836,7 @@ formSslTermination:
     placeholder: '例如: example.com'
   addHostLabel: 添加主机
   helpBlock: |
-    "注意: 一些旧的SSL/TLS客户的不支持<a href="https://en.wikipedia.org/wiki/Server_Name_Indication" target="_blank">Server Name Indication(SNI)</a> 功能，对于这些客户端将只提供主证书。对于支持SNI功能的现代客户端将根据匹配结果从备选证书列表中选择一个合适的证书"
+    "注意: 一些旧的SSL/TLS客户的不支持服务器名称指示(SNI)功能，对于这些客户端将只提供主证书。对于支持SNI功能的现代客户端将根据匹配结果从备选证书列表中选择一个合适的证书"
   notNeeded: 没有配置了有效的目标规则的SSL/TLS的监听端口。
   removeCertLabel: 删除此证书
   addCertLabel: 添加证书
@@ -4152,7 +4152,7 @@ hostSettings:
   helpText:
     static1: "不要包含<code>/v1</code>或任何其他路径，但如果你设置了"
     static2: "在{appName}前面，请确保使用<code>https://</code>."
-    isRancher: '<a href="{docsBase}/installing-rancher/installing-server/basic-ssl-config/" target="_blank">SSL Termination</a>'
+    isRancher: 'SSL Termination'
     sslTerm: SSL终止
   notPublic:
     alert: |
@@ -4399,7 +4399,6 @@ modalEditDriver:
   uiUrl:
     label: 自定义UI URL
     help: "可选项: 用于加载本驱动程序的自定义添加主机界面的URL"
-    link: 参考<a href="https://github.com/rancher/ui-driver-skel" target="_blank">ui-driver-skel</a>以了解更多信息
   checksum:
     label: 校验和
     help: "可选: 检验下载的驱动是否匹配期望的校验和"
@@ -4983,14 +4982,14 @@ nodeDriver:
     folder:
       label: Folder
       placeholder: "例如: /folder"
-      help: "Folder for the VM. This folder must already exist in the datacenter"
+      help: "用于虚拟机的文件夹。该文件夹必须已经存在于数据中心中。"
     cfgparam:
       key:
         placeholder: "例如: guestinfo.hostname"
       value:
         placeholder: "例如: myrancherhost"
-      label: Configuration Parameters used for guestinfo
-      addActionLabel: Add Parameter
+      label: 用于guestinfo的配置参数
+      addActionLabel: 增加配置参数
   azure:
     placement:
       title: 位置
@@ -5481,7 +5480,7 @@ schedulingRuleRow:
 
 serverUrl:
   header:
-    label: Rancher Server URL
+    label: Lemonce Cloud 的服务路径
     detail: "{appName}安装使用的地址，集群中的所有节点都需要能够访问此地址"
   button:
     save: 保存URL
@@ -5976,7 +5975,7 @@ volumeSource:
       label: 日志格式
       useCustomRegex: 使用一个自定义Fluentd regex
       useExistingLogFormat: 使用现有的日志格式
-      helpText: 你可以在</a>这里<a href="http://fluentular.herokuapp.com/" target="_blank">测试你的正则表达式
+      helpText: 你可以测试你的正则表达式
 
 yamlPage:
   errors: yaml文件中存在错误
