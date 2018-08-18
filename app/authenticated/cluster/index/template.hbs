@@ -1,7 +1,7 @@
 <section class="header clearfix">
   <h1 class="pull-left">{{t 'clusterDashboard.title'}}: {{model.cluster.displayName}}</h1>
 
-  <div class="right-buttons">
+  {{!-- <div class="right-buttons">
     <button class="btn bg-primary btn-sm icon-btn hide" {{action "dashboard"}}>
       <span class="darken"><i class="icon icon-external-link"></i></span>
       <span>{{t 'k8sPage.dashboard.button'}}</span>
@@ -18,7 +18,7 @@
     </button>
 
     {{action-menu size="sm" classNames="pull-right" model=model.cluster}}
-  </div>
+  </div> --}}
 </section>
 
 {{#if model.cluster.description}}

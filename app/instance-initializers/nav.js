@@ -243,14 +243,14 @@ const rootNav = [
     resource:       ['cluster'],
     resourceScope:  'global',
   },
-  {
-    scope:          'global',
-    id:             'global-node-drivers',
-    localizedLabel: 'nav.admin.nodeDrivers',
-    route:          'global-admin.node-drivers',
-    resource:       ['nodedriver'],
-    resourceScope:  'global',
-  },
+  // {
+  //   scope:          'global',
+  //   id:             'global-node-drivers',
+  //   localizedLabel: 'nav.admin.nodeDrivers',
+  //   route:          'global-admin.node-drivers',
+  //   resource:       ['nodedriver'],
+  //   resourceScope:  'global',
+  // },
   // {
   //   scope:          'global',
   //   id:             'global-catalogs',

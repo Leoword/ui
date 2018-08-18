@@ -45,7 +45,7 @@ Router.map(function() {
     this.route('dummy-dev', { path: '/dev' });
 
     this.route('apikeys');
-    this.route('node-templates');
+    // this.route('node-templates');
     this.route('prefs');
 
     // Per-Cluster

@@ -43,8 +43,8 @@ TranslationReducer.prototype.findMissingKeys = function(target, defaultTranslati
 
 module.exports = function(environment) {
   return {
-    locales: ['en-us'],
-    baseLocale: 'en-us',
+    locales: ['zh-hans'],
+    baseLocale: 'zh-hans',
     disablePolyfill: false,
     publicOnly: true,
     inputPath: 'translations',

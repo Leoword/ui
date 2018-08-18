@@ -34,7 +34,7 @@ alertPage:
     unhealthy: 不健康
     cpuUsage: CPU使用超过
     memUsage: 内存使用超过
-    podPlaceholder: 选择一个Pod
+    podPlaceholder: 选择一个应用
     notRunning: 未运行
     notScheduled: 未调度
     restarted: 重启
@@ -52,13 +52,13 @@ alertPage:
     nodeSelectorRequired: 需要主机选择器
   resourceKinds:
     # backend use capitalized name
-    Pod: Pod
+    Pod: 应用
     Node: 主机
     Deployment: 部署
     DaemonSet: DaemonSet
     StatefulSet: 状态集
   targetTypes:
-    pod: Pod
+    pod: 应用
     node: 主机
     deployment: 部署
     daemonset: Daemonset
