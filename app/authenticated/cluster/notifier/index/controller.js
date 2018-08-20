@@ -8,7 +8,7 @@ export default Controller.extend({
   globalStore:  service(),
 
   queryParams: ['type'],
-  currentType: 'slack',
+  currentType: 'email',
 
   notifiers: alias('model.notifiers'),
   actions:   {

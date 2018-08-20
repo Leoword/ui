@@ -8,30 +8,30 @@ import { inject as service } from '@ember/service';
 import NewOrEdit from 'ui/mixins/new-or-edit';
 
 const TYPES = [
-  {
-    type:     'slack',
-    label:    'notifierPage.notifierTypes.slack',
-    css:      'slack',
-    disabled: false,
-  },
+  // {
+  //   type:     'slack',
+  //   label:    'notifierPage.notifierTypes.slack',
+  //   css:      'slack',
+  //   disabled: false,
+  // },
   {
     type:     'email',
     label:    'notifierPage.notifierTypes.email',
     css:      'email',
     disabled: false,
   },
-  {
-    type:     'pagerduty',
-    // label: 'notifierPage.notifierTypes.pagerduty',
-    css:      'pagerduty',
-    disabled: false,
-  },
-  {
-    type:     'webhook',
-    label:    'notifierPage.notifierTypes.webhook',
-    css:      'webhook',
-    disabled: false,
-  },
+  // {
+  //   type:     'pagerduty',
+  //   // label: 'notifierPage.notifierTypes.pagerduty',
+  //   css:      'pagerduty',
+  //   disabled: false,
+  // },
+  // {
+  //   type:     'webhook',
+  //   label:    'notifierPage.notifierTypes.webhook',
+  //   css:      'webhook',
+  //   disabled: false,
+  // },
 ];
 
 export default Component.extend(ModalBase, NewOrEdit, {
@@ -60,15 +60,15 @@ export default Component.extend(ModalBase, NewOrEdit, {
       this.set('types', TYPES.filterBy('type', t));
     } else if (mode === 'add') {
       set(this, 'modelMap', {});
-      this.setModel(get(this, 'currentType'));
+      this.setModel('email');
       this.set('types', TYPES);
     }
   },
 
   actions: {
-    switchType(type) {
-      this.set('currentType', type);
-      this.setModel(type);
+    switchType() {
+      this.set('currentType', 'email');
+      this.setModel('email');
     },
     test() {
       if (get(this, 'testing') || get(this, 'tested')) {
