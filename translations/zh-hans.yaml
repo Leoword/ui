@@ -1036,7 +1036,7 @@ hostsPage:
         label:
           etcd: 用于服务发现存储仓库
           control: 用于管理
-          worker: 作为worker节点使用
+          worker: 作为工作机节点使用
 
   hostPage:
     header:
@@ -2106,8 +2106,8 @@ clusterNew:
       detail: '请选择主机角色,端口放行'
       header:
         etcd: 服务发现存储仓库
-        controlplane: Control
-        worker: Worker
+        controlplane: 控制器
+        worker: 工作机
       requirements:
         label: "所需的主机数: "
         etcd: 1,3或5
@@ -2131,7 +2131,7 @@ clusterNew:
     errors:
       etcd: 请选择1个，3个或5个主机用于服务发现存储仓库。
       controlPlane: 请至少选择一个用于management的主机。
-      worker: 请至少选择一个用于worker的主机。
+      worker: 请至少选择一个用于工作的主机。
     dockerRootDir:
       label: 应用容器引擎目录
       placeholder: "{dir}是默认目录"
@@ -5840,9 +5840,9 @@ model:
     displayKind: L7负载均衡器
   machine:
     role:
-      worker: Worker
+      worker: 工作机
       etcd: 服务发现存储仓库
-      controlPlane: Control
+      controlPlane: 控制器
   openldapconfig:
     server:
       label: 主机名或IP地址
