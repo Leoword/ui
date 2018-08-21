@@ -10,9 +10,9 @@
   </td>
   <td data-title="{{dt.name}}" class="clip">
     <a href="{{href-to "workload" model.id}}">{{model.displayName}} <i class="{{model.activeIcon}}"></i></a>
-    {{#if model.showTransitioningMessage}}
-      <div class="clip text-small {{model.stateColor}}">{{uc-first model.transitioningMessage}}</div>
-    {{else if model.displayEndpoints}}
+    {{!-- {{#if model.showTransitioningMessage}}
+      <div class="clip text-small {{model.stateColor}}">{{uc-first model.transitioningMessage}}</div> --}}
+    {{#if model.displayEndpoints}}
       <div class="clip text-small">
         {{model.displayEndpoints}}
       </div>

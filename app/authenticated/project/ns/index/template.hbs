@@ -58,12 +58,12 @@
             {{/if}}
           </td>
         </tr>
-      {{else}}
+      {{!-- {{else}}
         <tr class="group-row">
           <td colspan="{{sortable.fullColspan}}" class="pl-10">
             {{t 'projectsListNamespacePage.notIn'}}
           </td>
-        </tr>
+        </tr> --}}
       {{/if}}
     {{else if (eq kind "nomatch")}}
       <tr><td colspan="{{sortable.fullColspan}}" class="text-center text-muted lacsso pt-20 pb-20">{{t 'namespacesPage.noMatch'}}</td></tr>
